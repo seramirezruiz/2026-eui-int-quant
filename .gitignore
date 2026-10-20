@@ -1,0 +1,15 @@
+# macOS and Dropbox
+.DS_Store
+Icon?
+.dropbox
+.dropbox.attr
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+
+# editors
+.vscode/
+.positron/

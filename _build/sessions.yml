@@ -1,0 +1,250 @@
+# ---------------------------------------------------------------------------
+
+course:
+  title: "Intermediate Quantitative Methods"
+  term: "First Term, Academic Year 2026–2027"
+  department: "Department of Political and Social Sciences"
+  institution: "European University Institute"
+  updated: "October 20, 2026"
+
+people:
+  - role: "Instructors"
+    name: "Kevin Munger"
+    url: "https://kevinmunger.com/"
+    email: "kevin.munger@eui.eu"
+  - role: ""
+    name: "Sebastian Ramirez-Ruiz"
+    url: "https://seramirezruiz.github.io/"
+    email: "sebastian.ramirezruiz@eui.eu"
+  - role: "Teaching assistant"
+    name: "Martín Alberdi"
+    url: "https://martinalberdi.github.io/"
+    email: "martin.alberdi@eui.eu"
+  - role: "Administrative assistant"
+    name: "Marco Pistolesi"
+    email: "marco.pistolesi@eui.eu"
+
+logistics:
+  - ["Seminar", "Fridays, 15:00–17:00, Seminar Room 2"]
+  - ["Lab", "Mondays, 17:00–19:00, Seminar Room 2"]
+
+blocks:
+  1:
+    title: "Inference, hypothesis testing, and the practice of quantitative research"
+    by: "KM"
+    intro: "Before any model, method, or dataset: what are we doing when we do quantitative social science? This block sets the epistemic foundations of the course: the logic of inference and its well-documented pathologies, the practices that make research credible and reproducible, and the crucial habit of asking what a given analysis is for."
+  2:
+    title: "Causal thinking and measurement"
+    by: "SRR"
+    intro: "Two questions come before any estimation: what exactly is the quantity we are trying to estimate, and do our numbers actually measure the concepts we care about?"
+  3:
+    title: "Modeling"
+    by: "KM & SRR"
+    intro: "With estimands and measures in hand, we turn to the model families that do most of the work in applied political science and sociology. Each week pairs the mechanics of estimation with the question of interpretation: what does this model let us say, and what does it not?"
+  4:
+    title: "Advanced tools for quantitative and computational analysis"
+    by: "KM & SRR"
+    intro: ""
+
+sessions:
+  - week: 1
+    block: 1
+    date: "October 2"
+    title: "The logic of statistical inference... and what we are doing when we do it"
+    by: "Kevin Munger"
+    released: true
+    slides:
+      - label: "Introduction and inference"
+        src: "2026-eui-intermediate-quant/lectures/lecture-intro/intro-lecture-new.pdf"
+        as: "01-introduction.pdf"
+    lab:
+      title: "Lab 1: Introduction to R and the {tidyverse}"
+      date: "October 5"
+      src: "2026-eui-int-quant-labs/live/01-intro/01-intro-r-tidyverse.html"
+    compulsory:
+      - "McElreath, R. (2023). The Golem of Prague. *Statistical Rethinking 2023*, Lecture 1. [Video: YouTube] (Or Ch. 1 of *Statistical Rethinking*, 2nd ed., 2020.)"
+      - "Gigerenzer, G. (2004). Mindless statistics. *Journal of Socio-Economics* 33(5): 587–606."
+      - "Freedman, D. (1991). Statistical models and shoe leather. *Sociological Methodology* 21: 291–313."
+    optional:
+      - "Gelman, A., & Loken, E. (2014). The statistical crisis in science. *American Scientist* 102(6): 460–465."
+      - "Simmons, J., Nelson, L., & Simonsohn, U. (2011). False-positive psychology. *Psychological Science* 22(11): 1359–1366."
+      - "Breznau, N., et al. (2022). Observing many researchers using the same data and hypothesis reveals a hidden universe of uncertainty. *PNAS* 119(44)."
+      - "Colquhoun, D. (2014). An investigation of the false discovery rate and the misinterpretation of p-values. *Royal Society Open Science* 1(3): 140216."
+      - "Carsey & Harden, Ch. 1–4."
+
+  - week: 2
+    block: 1
+    date: "October 9"
+    title: "Regression anatomy: Description, prediction, or inference?"
+    by: "Kevin Munger"
+    released: true
+    slides:
+      - label: "What is a regression for?"
+        src: "2026-eui-intermediate-quant/lectures/lecture-2/purpose-lecture.pdf"
+        as: "02-what-is-a-regression-for.pdf"
+      - label: "Regression anatomy"
+        src: "2026-eui-intermediate-quant/lectures/lecture-2/anatomy-lecture-new.pdf"
+        as: "02-regression-anatomy.pdf"
+    lab:
+      title: "Lab 2: Regression in R"
+      date: "October 12"
+      src: "2026-eui-int-quant-labs/live/02-regression/02-regression.html"
+    compulsory:
+      - "Gelman, Hill & Vehtari, *Regression and Other Stories*, Ch. 6–8, 10."
+      - "Munger, K., Guess, A., & Hargittai, E. (2021). Quantitative description of digital media: A modest proposal to disrupt academic publishing. *Journal of Quantitative Description: Digital Media* 1."
+    optional:
+      - "Brambor, T., Clark, W. R., & Golder, M. (2006). Understanding interaction models: Improving empirical analyses. *Political Analysis* 14(1): 63–82."
+      - "Hainmueller, J., Mummolo, J., & Xu, Y. (2019). How much should we trust estimates from multiplicative interaction models? *Political Analysis* 27(2): 163–192."
+      - "King, G., & Roberts, M. (2015). How robust standard errors expose methodological problems they do not fix. *Political Analysis* 23(2): 159–179."
+      - "Agresti, Ch. 9; Wooldridge, Ch. 2–5, 8; Carsey & Harden, Ch. 5–6."
+
+  - week: 3
+    block: 2
+    date: "October 16"
+    note: "Room change: Sala Triaria, Villa Schifanoia"
+    title: "Thinking causally: Estimands, DAGs, and model specification"
+    by: "Sebastian Ramirez-Ruiz"
+    released: true
+    slides:
+      - label: "Thinking causally"
+        src: "slides/output/week-03/03-thinking-causally.pdf"
+        as: "03-thinking-causally.pdf"
+    lab:
+      title: "Lab 3: Data visualization, DAGs, and regression for causal inference"
+      date: "October 19"
+      src: "2026-eui-int-quant-labs/live/03-causal/03-dataviz-dags.html"
+    compulsory:
+      - "Lundberg, I., Johnson, R., & Stewart, B. (2021). What is your estimand? Defining the target quantity connects statistical evidence to theory. *American Sociological Review* 86(3): 532–565."
+      - "Knox, D., Lowe, W., & Mummolo, J. (2020). Administrative records mask racially biased policing. *American Political Science Review* 114(3): 619–637."
+      - "Bronner, L. (2020). Why statistics don't capture the full extent of the systemic bias in policing. *FiveThirtyEight*. [Permalink](https://perma.cc/U78B-NS9W)"
+    optional:
+      - "Cunningham, S. (2021). *Causal Inference: The Mixtape*, Ch. 3–4."
+      - "Cinelli, C., Forney, A., & Pearl, J. (2024). A crash course in good and bad controls. *Sociological Methods & Research* 53(3): 1071–1104."
+      - "Elwert, F., & Winship, C. (2014). Endogenous selection bias: The problem of conditioning on a collider variable. *Annual Review of Sociology* 40: 31–53."
+      - "Imbens, G. (2020). Potential outcome and directed acyclic graph approaches to causality. *Journal of Economic Literature* 58(4): 1129–1179."
+
+  - week: 4
+    block: 2
+    date: "October 23"
+    title: "Measurement I: From concepts to numbers"
+    by: "Sebastian Ramirez-Ruiz"
+    released: false
+    slides:
+      - label: "Measurement I"
+        src: "slides/output/week-04/04-measurement-i.pdf"
+        as: "04-measurement-i.pdf"
+    lab:
+      title: "Lab 4: Measurement, reliability, and measurement error"
+      date: "October 26"
+      src: "2026-eui-int-quant-labs/live/04-measurement/04-measurement.html"
+    compulsory:
+      - "Adcock, R., & Collier, D. (2001). Measurement validity: A shared standard for qualitative and quantitative research. *American Political Science Review* 95(3): 529–546."
+      - "Flake, J. K., & Fried, E. I. (2020). Measurement schmeasurement: Questionable measurement practices and how to avoid them. *Advances in Methods and Practices in Psychological Science* 3(4): 456–465."
+      - "Loken, E., & Gelman, A. (2017). Measurement error and the replication crisis. *Science* 355(6325): 584–585."
+    optional:
+      - "Egami, N., & Hartman, E. (2023). Elements of external validity: Framework, design, and analysis. *American Political Science Review* 117(3): 1070–1088."
+      - "Findley, M., Kikuta, K., & Denly, M. (2021). External validity. *Annual Review of Political Science* 24: 365–393."
+      - "Ansolabehere, S., Rodden, J., & Snyder, J. (2008). The strength of issues: Using multiple measures to gauge preference stability, ideological constraint, and issue voting. *American Political Science Review* 102(2): 215–232."
+      - "McNeish, D. (2018). Thanks coefficient alpha, we'll take it from here. *Psychological Methods* 23(3): 412–433."
+      - "Wooldridge, Ch. 9 (errors-in-variables)."
+
+  - week: 5
+    block: 2
+    date: "October 30"
+    title: "Measurement II: Latent variables"
+    by: "Sebastian Ramirez-Ruiz"
+    released: false
+    compulsory:
+      - "Campos, N., & Federico, C. (2026). A new measure of affective polarization. *American Political Science Review* 120(1): 160–178."
+      - "Claassen, C., et al. (2025). Measuring rural and urban consciousness in Europe. *Electoral Studies* 95: 102912."
+    optional:
+      - "Claassen, C., et al. (2025). Conceptualizing and measuring support for democracy: A new approach. *Comparative Political Studies* 58(6): 1171–1198."
+      - "Treier, S., & Jackman, S. (2008). Democracy as a latent variable. *American Journal of Political Science* 52(1): 201–217."
+      - "Davidov, E., Meuleman, B., Cieciuch, J., Schmidt, P., & Billiet, J. (2014). Measurement equivalence in cross-national research. *Annual Review of Sociology* 40: 55–75."
+      - "Jackman, S. (2008). Measurement. In *The Oxford Handbook of Political Methodology*. Oxford."
+      - "DeVellis & Thorpe, *Scale Development*, Ch. 1–8."
+
+  - week: 6
+    block: 3
+    date: "November 6"
+    title: "Maximum likelihood and binary outcomes"
+    by: "Sebastian Ramirez-Ruiz"
+    released: false
+    compulsory:
+      - "Stock, J. H., & Watson, M. W. *Introduction to Econometrics*, Ch. 11 (Regression with a binary dependent variable)."
+      - "Mood, C. (2010). Logistic regression: Why we cannot do what we think we can do, and what to do about it. *European Sociological Review* 26(1): 67–82."
+      - "Buis, M. L. (2017). Logistic regression: When can we do what we think we can do? Working paper. [Available online](http://www.maartenbuis.nl/wp/odds_ratio_3.1.pdf)"
+    optional:
+      - "Kuha, J., & Mills, C. (2020). On group comparisons with logistic regression models. *Sociological Methods & Research* 49(2): 498–525."
+      - "Breen, R., Karlson, K. B., & Holm, A. (2018). Interpreting and understanding logits, probits, and other nonlinear probability models. *Annual Review of Sociology* 44: 39–54."
+      - "Ward, M., & Ahlquist, J. (2018). *Maximum Likelihood for Social Science*. Cambridge."
+
+  - week: 7
+    block: 3
+    date: "November 13"
+    title: "Nested data: Fixed effects, random effects, and multilevel basics"
+    by: "Kevin Munger"
+    released: false
+    compulsory:
+      - "Bell, A., Fairbrother, M., & Jones, K. (2019). Fixed and random effects models: Making an informed choice. *Quality & Quantity* 53(2): 1051–1074."
+    optional:
+      - "Snijders, T. A. B., & Bosker, R. J. (2012). *Multilevel Analysis*, 2nd ed. Sage. Ch. 1–5."
+      - "Stegmueller, D. (2013). How many countries for multilevel modeling? *American Journal of Political Science* 57(3): 748–761."
+      - "Schmidt-Catran, A., & Fairbrother, M. (2016). The random effects in multilevel models. *European Sociological Review* 32(1): 23–38."
+      - "Roth, J., Sant'Anna, P., Bilinski, A., & Poe, J. (2023). What's trending in difference-in-differences? *Journal of Econometrics* 235(2): 2218–2244. (Signpost reading.)"
+
+  - week: 8
+    block: 3
+    date: "November 20"
+    title: "Machine learning: Prediction and measurement"
+    by: "Sebastian Ramirez-Ruiz"
+    released: false
+    compulsory:
+      - "Mullainathan, S., & Spiess, J. (2017). Machine learning: An applied econometric approach. *Journal of Economic Perspectives* 31(2): 87–106."
+      - "Grimmer, J., Roberts, M., & Stewart, B. (2021). Machine learning for social science: An agnostic approach. *Annual Review of Political Science* 24: 395–419."
+    optional:
+      - "Molina, M., & Garip, F. (2019). Machine learning for sociology. *Annual Review of Sociology* 45: 27–45."
+      - "Knox, D., Lucas, C., & Cho, W. K. T. (2022). Testing causal theories with learned proxies. *Annual Review of Political Science* 25: 419–441."
+      - "Fong, C., & Tyler, M. (2021). Machine learning predictions as regression covariates. *Political Analysis* 29(4): 467–484."
+
+  - week: 9
+    block: 4
+    date: "November 27"
+    title: "Modern data in quantitative social science: Where the frontier is"
+    by: "Kevin Munger"
+    released: false
+    compulsory:
+      - "Salganik, *Bit by Bit*, Ch. 2 (Observing behavior)."
+      - "Lazer, D., Hargittai, E., Freelon, D., et al. (2021). Meaningful measures of human society in the twenty-first century. *Nature* 595: 189–196."
+      - "Munger, K. (2019). The limited value of non-replicable field experiments in contexts with low temporal validity. *Social Media + Society* 5(3)."
+    optional:
+      - "Lazer, D., Kennedy, R., King, G., & Vespignani, A. (2014). The parable of Google Flu: Traps in big data analysis. *Science* 343(6176): 1203–1205. [found data]"
+      - "Sen, I., et al. (2021). A total error framework for digital traces of human behavior on online platforms. *Public Opinion Quarterly* 85(S1): 399–422. [found data]"
+      - "Grimmer, Roberts & Stewart, *Text as Data*, Ch. 2–4. [text]"
+      - "Rodriguez, P., & Spirling, A. (2022). Word embeddings: What works, what doesn't, and how to tell the difference for applied research. *Journal of Politics* 84(1): 101–115. [text]"
+      - "Webb Williams, N., Casas, A., & Wilkerson, J. (2020). *Images as Data for Social Science Research*. Cambridge Elements. [images]"
+      - "Torres, M., & Cantú, F. (2021). Learning to see: Convolutional neural networks for the analysis of social science data. *Political Analysis* 30(1): 113–131. [images]"
+      - "Mestre, R., & Ryan, M. (2026). Potential and pitfalls of audio as data for political research: Alignment, features, and classification models. *Political Analysis* 34(3): 312–328. [audio]"
+      - "Knox, D., & Lucas, C. (2021). A dynamic model of speech for the social sciences. *American Political Science Review* 115(2): 649–666. [audio]"
+      - "Druckman, J. N., & Green, D. P. (Eds.) (2021). *Advances in Experimental Political Science*, Part I (Experimental designs). Cambridge University Press. [field experiments]"
+      - "Schachter, A., & Weisshaar, K. (2025). Survey experiments in sociology. *Annual Review of Sociology* 51: 149–169. [survey experiments]"
+      - "Hainmueller, J., Hopkins, D., & Yamamoto, T. (2014). Causal inference in conjoint analysis. *Political Analysis* 22(1): 1–30. [survey experiments]"
+      - "Salganik, *Bit by Bit*, Ch. 4 (Running experiments). [digital experiments]"
+
+  - week: 10
+    block: 4
+    date: "December 4"
+    title: "Generative AI in the quantitative research pipeline: Opportunities and risks"
+    by: "Kevin Munger & Sebastian Ramirez-Ruiz"
+    released: false
+    compulsory:
+      - "Bail, C. (2024). Can Generative AI improve social science? *PNAS* 121(21): e2314021121."
+      - "Messeri, L., & Crockett, M. J. (2024). Artificial intelligence and illusions of understanding in scientific research. *Nature* 627: 49–58."
+      - "Munger, K. (2025). AI as normal science. [Substack](https://kevinmunger.substack.com/p/ai-as-normal-science)"
+      - "Munger, K. (2026). AI allows more diversity in the forms of social science. [Substack](https://kevinmunger.substack.com/p/ai-allows-more-diversity-in-the-forms)"
+    optional:
+      - "Ollion, É., Shen, R., Macanovic, A., & Chatelain, A. (2024). The dangers of using proprietary LLMs for research. *Nature Machine Intelligence* 6: 4–5."
+      - "Ornstein, J., Blasingame, E., & Truscott, J. (2025). How to train your stochastic parrot: Large language models for political texts. *Political Science Research and Methods* 13(2)."
+      - "Argyle, L., et al. (2023). Out of one, many: Using language models to simulate human samples. *Political Analysis* 31(3): 337–351."
+      - "Bisbee, J., et al. (2024). Synthetic replacements for human survey data? The perils of large language models. *Political Analysis* 32(4): 401–416."
+      - "Törnberg, P. (2024). Best practices for text annotation with large language models. *Sociologica* 18(2)."
