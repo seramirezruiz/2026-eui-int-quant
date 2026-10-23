@@ -24,6 +24,7 @@ about <- paste(readLines(file.path(site, "_build", "about.html"), encoding = "UT
 course <- cfg$course
 sessions <- cfg$sessions
 released <- Filter(function(s) isTRUE(s$released), sessions)
+n_closed <- sum(vapply(sessions, function(s) isTRUE(s$closed), logical(1)))
 
 # --- helpers -----------------------------------------------------------------
 
@@ -44,6 +45,8 @@ md <- function(x) {
 wk <- function(s) sprintf("%02d", s$week)
 session_url <- function(s, up = "") paste0(up, "sessions/week-", wk(s), ".html")
 mb <- function(path) sprintf("%.1f MB", file.size(path) / 1024^2)
+# a lab is posted only if the session has one and it is not marked `released: false`
+lab_online <- function(s) !is.null(s$lab) && !isFALSE(s$lab$released)
 note_html <- function(s, tag = "div") {
   if (is.null(s$note) || !nzchar(s$note)) return("")
   sprintf('<%s class="roomnote">%s</%s>', tag, md(s$note), tag)
@@ -66,7 +69,8 @@ page <- function(title, body, up = "", tab = "home") {
   } else "<p>Nothing yet.</p>"
   latest <- if (length(released)) {
     s <- released[[length(released)]]
-    sprintf('<span class="new">NEW!</span> <a href="%s">Week %d</a> slides and lab are online.', session_url(s, up), s$week)
+    sprintf('<span class="new">NEW!</span> <a href="%s">Week %d</a> %s online.', session_url(s, up), s$week,
+            if (lab_online(s)) "slides and lab are" else "slides are")
   } else "Materials appear here after each session."
   people <- paste(vapply(cfg$people, function(p)
     sprintf('%s<br><a href="mailto:%s">%s</a>', esc(p$name), p$email, p$email), ""), collapse = "<br>")
@@ -125,7 +129,7 @@ for (s in released) {
     }
     if (!file.exists(dest) || file.size(dest) == 0) file.copy(src, dest, overwrite = TRUE)
   }
-  if (!is.null(s$lab)) {
+  if (lab_online(s)) {
     src <- file.path(repo, s$lab$src)
     if (!file.exists(src)) stop("Missing lab for week ", s$week, ": ", s$lab$src)
     html <- paste(readLines(src, warn = FALSE, encoding = "UTF-8"), collapse = "\n")
@@ -158,10 +162,13 @@ for (i in seq_along(released)) {
             esc(sl$label), mb(f), sl$as, sl$as)
   }, ""), collapse = "\n")
 
-  lab_html <- if (!is.null(s$lab)) sprintf(
+  lab_html <- if (lab_online(s)) sprintf(
     '<div class="material"><b>Lab:</b> %s <span class="small">(Monday, %s, with Martín Alberdi)</span><br>
 <a class="button" href="../labs/%s">Open the lab</a></div>',
-    md(s$lab$title), esc(s$lab$date), basename(s$lab$src)) else ""
+    md(s$lab$title), esc(s$lab$date), basename(s$lab$src)) else if (!is.null(s$lab)) sprintf(
+    '<div class="material"><b>Lab:</b> %s <span class="small">(Monday, %s, with Martín Alberdi)</span><br>
+<span class="muted">Posted after the lab.</span></div>',
+    md(s$lab$title), esc(s$lab$date)) else ""
 
   prev <- if (i > 1) sprintf('<a href="week-%s.html">&laquo; Week %d</a>', wk(released[[i - 1]]), released[[i - 1]]$week) else "<span></span>"
   nxt <- if (i < length(released)) sprintf('<a href="week-%s.html">Week %d &raquo;</a>', wk(released[[i + 1]]), released[[i + 1]]$week) else "<span></span>"
@@ -192,6 +199,11 @@ for (i in seq_along(released)) {
 rows <- character(0)
 last_block <- 0
 for (s in sessions) {
+  if (isTRUE(s$closed)) {
+    rows <- c(rows, sprintf('<tr class="closed"><td>&ndash;</td><td>%s</td><td colspan="2">%s</td></tr>',
+                            esc(s$date), md(s$note)))
+    next
+  }
   if (s$block != last_block) {
     b <- cfg$blocks[[as.character(s$block)]]
     rows <- c(rows, sprintf('<tr class="block"><td colspan="4">Block %d &mdash; %s (%s)</td></tr>',
@@ -202,7 +214,7 @@ for (s in sessions) {
     mats <- c(sprintf('<a href="%s">Session page</a>', session_url(s)),
               vapply(seq_along(s$slides), function(j) sprintf('<a href="slides/%s" target="_blank" rel="noopener">Slides%s</a>', s$slides[[j]]$as,
                                                          if (length(s$slides) > 1) paste0(" ", j) else ""), ""),
-              if (!is.null(s$lab)) sprintf('<a href="labs/%s">Lab %d</a>', basename(s$lab$src), s$week))
+              if (lab_online(s)) sprintf('<a href="labs/%s">Lab %d</a>', basename(s$lab$src), s$week))
     rows <- c(rows, sprintf('<tr><td>%d</td><td>%s%s</td><td><a href="%s">%s</a><br><span class="small">%s</span></td><td>%s</td></tr>',
                             s$week, esc(s$date), note_html(s), session_url(s), md(s$title), esc(s$by), paste(sprintf('<span class="nowrap">%s</span>', mats), collapse = " &middot; ")))
   } else {
@@ -239,4 +251,5 @@ home <- sprintf('<h2>Welcome!</h2>
 write_utf8(page(course$title, home), file.path(site, "index.html"))
 if (!file.exists(file.path(site, ".nojekyll"))) invisible(file.create(file.path(site, ".nojekyll")))
 
-message("Built ", length(released), " session pages; ", length(sessions) - length(released), " sessions listed as coming soon.")
+message("Built ", length(released), " session pages; ", length(sessions) - length(released) - n_closed,
+        " sessions listed as coming soon; ", n_closed, " closure(s) listed.")

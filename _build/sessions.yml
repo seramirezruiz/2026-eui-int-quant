@@ -5,7 +5,7 @@ course:
   term: "First Term, Academic Year 2026–2027"
   department: "Department of Political and Social Sciences"
   institution: "European University Institute"
-  updated: "October 20, 2026"
+  updated: "October 23, 2026"
 
 people:
   - role: "Instructors"
@@ -128,7 +128,7 @@ sessions:
     date: "October 23"
     title: "Measurement I: From concepts to numbers"
     by: "Sebastian Ramirez-Ruiz"
-    released: false
+    released: true
     slides:
       - label: "Measurement I"
         src: "slides/output/week-04/04-measurement-i.pdf"
@@ -136,6 +136,7 @@ sessions:
     lab:
       title: "Lab 4: Measurement, reliability, and measurement error"
       date: "October 26"
+      released: false
       src: "2026-eui-int-quant-labs/live/04-measurement/04-measurement.html"
     compulsory:
       - "Adcock, R., & Collier, D. (2001). Measurement validity: A shared standard for qualitative and quantitative research. *American Political Science Review* 95(3): 529–546."
@@ -148,9 +149,14 @@ sessions:
       - "McNeish, D. (2018). Thanks coefficient alpha, we'll take it from here. *Psychological Methods* 23(3): 412–433."
       - "Wooldridge, Ch. 9 (errors-in-variables)."
 
-  - week: 5
+  - closed: true
     block: 2
     date: "October 30"
+    note: "No session: the EUI is closed."
+
+  - week: 5
+    block: 2
+    date: "November 6"
     title: "Measurement II: Latent variables"
     by: "Sebastian Ramirez-Ruiz"
     released: false
@@ -166,7 +172,7 @@ sessions:
 
   - week: 6
     block: 3
-    date: "November 6"
+    date: "November 13"
     title: "Maximum likelihood and binary outcomes"
     by: "Sebastian Ramirez-Ruiz"
     released: false
@@ -181,7 +187,7 @@ sessions:
 
   - week: 7
     block: 3
-    date: "November 13"
+    date: "November 20"
     title: "Nested data: Fixed effects, random effects, and multilevel basics"
     by: "Kevin Munger"
     released: false
@@ -195,7 +201,7 @@ sessions:
 
   - week: 8
     block: 3
-    date: "November 20"
+    date: "November 27"
     title: "Machine learning: Prediction and measurement"
     by: "Sebastian Ramirez-Ruiz"
     released: false
@@ -209,7 +215,7 @@ sessions:
 
   - week: 9
     block: 4
-    date: "November 27"
+    date: "December 4"
     title: "Modern data in quantitative social science: Where the frontier is"
     by: "Kevin Munger"
     released: false
@@ -233,7 +239,8 @@ sessions:
 
   - week: 10
     block: 4
-    date: "December 4"
+    date: "December 11"
+    note: "Room change: Seminar Room 4, Badia Fiesolana"
     title: "Generative AI in the quantitative research pipeline: Opportunities and risks"
     by: "Kevin Munger & Sebastian Ramirez-Ruiz"
     released: false

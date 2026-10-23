@@ -196,3 +196,10 @@ ol.readings li, ul.books li { margin: 4px 0; }
   #header h1 { font-size: 22px; }
   table.info td:first-child { width: auto; }
 }
+
+/* ---- schedule: dates with no session ---- */
+table.grid tr.closed td {
+  background: #fdf0f1;
+  color: #c6273b;
+  font-weight: bold;
+}
