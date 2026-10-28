@@ -189,7 +189,7 @@ sessions:
     block: 3
     date: "November 20"
     title: "Nested data: Fixed effects, random effects, and multilevel basics"
-    by: "Kevin Munger"
+    by: "Sebastian Ramirez-Ruiz"
     released: false
     compulsory:
       - "Bell, A., Fairbrother, M., & Jones, K. (2019). Fixed and random effects models: Making an informed choice. *Quality & Quantity* 53(2): 1051–1074."
@@ -203,7 +203,7 @@ sessions:
     block: 3
     date: "November 27"
     title: "Machine learning: Prediction and measurement"
-    by: "Sebastian Ramirez-Ruiz"
+    by: "Kevin Munger"
     released: false
     compulsory:
       - "Mullainathan, S., & Spiess, J. (2017). Machine learning: An applied econometric approach. *Journal of Economic Perspectives* 31(2): 87–106."
