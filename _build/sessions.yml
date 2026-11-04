@@ -5,7 +5,7 @@ course:
   term: "First Term, Academic Year 2026–2027"
   department: "Department of Political and Social Sciences"
   institution: "European University Institute"
-  updated: "October 23, 2026"
+  updated: "November 4, 2026"
 
 people:
   - role: "Instructors"
@@ -239,8 +239,8 @@ sessions:
 
   - week: 10
     block: 4
-    date: "December 11"
-    note: "Room change: Seminar Room 4, Badia Fiesolana"
+    date: "December 7"
+    note: "Extraordinary session on Monday, Seminar Room 4"
     title: "Generative AI in the quantitative research pipeline: Opportunities and risks"
     by: "Kevin Munger & Sebastian Ramirez-Ruiz"
     released: false
