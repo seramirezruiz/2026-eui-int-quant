@@ -5,7 +5,7 @@ course:
   term: "First Term, Academic Year 2026–2027"
   department: "Department of Political and Social Sciences"
   institution: "European University Institute"
-  updated: "October 23, 2026"
+  updated: "November 4, 2026"
 
 people:
   - role: "Instructors"
@@ -136,7 +136,6 @@ sessions:
     lab:
       title: "Lab 4: Measurement, reliability, and measurement error"
       date: "October 26"
-      released: false
       src: "2026-eui-int-quant-labs/live/04-measurement/04-measurement.html"
     compulsory:
       - "Adcock, R., & Collier, D. (2001). Measurement validity: A shared standard for qualitative and quantitative research. *American Political Science Review* 95(3): 529–546."
@@ -159,7 +158,11 @@ sessions:
     date: "November 6"
     title: "Measurement II: Latent variables"
     by: "Sebastian Ramirez-Ruiz"
-    released: false
+    released: true
+    slides:
+      - label: "Measurement II"
+        src: "slides/output/week-05/05-measurement-ii.pdf"
+        as: "05-measurement-ii.pdf"
     compulsory:
       - "Campos, N., & Federico, C. (2026). A new measure of affective polarization. *American Political Science Review* 120(1): 160–178."
       - "Claassen, C., et al. (2025). Measuring rural and urban consciousness in Europe. *Electoral Studies* 95: 102912."
@@ -239,8 +242,8 @@ sessions:
 
   - week: 10
     block: 4
-    date: "December 11"
-    note: "Room change: Seminar Room 4, Badia Fiesolana"
+    date: "December 7"
+    note: "Extraordinary session on Monday, Seminar Room 4"
     title: "Generative AI in the quantitative research pipeline: Opportunities and risks"
     by: "Kevin Munger & Sebastian Ramirez-Ruiz"
     released: false
