@@ -5,7 +5,7 @@ course:
   term: "First Term, Academic Year 2026–2027"
   department: "Department of Political and Social Sciences"
   institution: "European University Institute"
-  updated: "November 4, 2026"
+  updated: "November 9, 2026"
 
 people:
   - role: "Instructors"
@@ -163,6 +163,10 @@ sessions:
       - label: "Measurement II"
         src: "slides/output/week-05/05-measurement-ii.pdf"
         as: "05-measurement-ii.pdf"
+    lab:
+      title: "Lab 5: Latent variables: Factor models, IRT, and measurement invariance"
+      date: "November 9"
+      src: "2026-eui-int-quant-labs/live/05-latent/05-latent-variables.html"
     compulsory:
       - "Campos, N., & Federico, C. (2026). A new measure of affective polarization. *American Political Science Review* 120(1): 160–178."
       - "Claassen, C., et al. (2025). Measuring rural and urban consciousness in Europe. *Electoral Studies* 95: 102912."
