@@ -5,7 +5,7 @@ course:
   term: "First Term, Academic Year 2026–2027"
   department: "Department of Political and Social Sciences"
   institution: "European University Institute"
-  updated: "November 9, 2026"
+  updated: "November 13, 2026"
 
 people:
   - role: "Instructors"
@@ -182,7 +182,11 @@ sessions:
     date: "November 13"
     title: "Maximum likelihood and binary outcomes"
     by: "Sebastian Ramirez-Ruiz"
-    released: false
+    released: true
+    slides:
+      - label: "Binary outcomes and maximum likelihood"
+        src: "slides/output/week-06/06-binary-outcomes.pdf"
+        as: "06-binary-outcomes.pdf"
     compulsory:
       - "Stock, J. H., & Watson, M. W. *Introduction to Econometrics*, Ch. 11 (Regression with a binary dependent variable)."
       - "Mood, C. (2010). Logistic regression: Why we cannot do what we think we can do, and what to do about it. *European Sociological Review* 26(1): 67–82."
