@@ -5,7 +5,7 @@ course:
   term: "First Term, Academic Year 2026–2027"
   department: "Department of Political and Social Sciences"
   institution: "European University Institute"
-  updated: "November 13, 2026"
+  updated: "November 20, 2026"
 
 people:
   - role: "Instructors"
@@ -187,6 +187,10 @@ sessions:
       - label: "Binary outcomes and maximum likelihood"
         src: "slides/output/week-06/06-binary-outcomes.pdf"
         as: "06-binary-outcomes.pdf"
+    lab:
+      title: "Lab 6: Binary outcomes and maximum likelihood"
+      date: "November 16"
+      src: "2026-eui-int-quant-labs/live/06-binary/06-binary-outcomes.html"
     compulsory:
       - "Stock, J. H., & Watson, M. W. *Introduction to Econometrics*, Ch. 11 (Regression with a binary dependent variable)."
       - "Mood, C. (2010). Logistic regression: Why we cannot do what we think we can do, and what to do about it. *European Sociological Review* 26(1): 67–82."
@@ -201,10 +205,15 @@ sessions:
     date: "November 20"
     title: "Nested data: Fixed effects, random effects, and multilevel basics"
     by: "Sebastian Ramirez-Ruiz"
-    released: false
+    released: true
+    slides:
+      - label: "Nested data"
+        src: "slides/output/week-07/07-nested-data.pdf"
+        as: "07-nested-data.pdf"
     compulsory:
       - "Bell, A., Fairbrother, M., & Jones, K. (2019). Fixed and random effects models: Making an informed choice. *Quality & Quantity* 53(2): 1051–1074."
     optional:
+      - "Hazlett, C., & Wainstein, L. (2022). Understanding, choosing, and unifying multilevel and fixed effect approaches. *Political Analysis* 30(1): 46–65."
       - "Snijders, T. A. B., & Bosker, R. J. (2012). *Multilevel Analysis*, 2nd ed. Sage. Ch. 1–5."
       - "Stegmueller, D. (2013). How many countries for multilevel modeling? *American Journal of Political Science* 57(3): 748–761."
       - "Schmidt-Catran, A., & Fairbrother, M. (2016). The random effects in multilevel models. *European Sociological Review* 32(1): 23–38."
