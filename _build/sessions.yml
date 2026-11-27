@@ -5,7 +5,7 @@ course:
   term: "First Term, Academic Year 2026–2027"
   department: "Department of Political and Social Sciences"
   institution: "European University Institute"
-  updated: "November 20, 2026"
+  updated: "November 27, 2026"
 
 people:
   - role: "Instructors"
@@ -210,6 +210,10 @@ sessions:
       - label: "Nested data"
         src: "slides/output/week-07/07-nested-data.pdf"
         as: "07-nested-data.pdf"
+    lab:
+      title: "Lab 7: Nested data"
+      date: "November 23"
+      src: "2026-eui-int-quant-labs/live/07-nested-data/07-nested-data.html"
     compulsory:
       - "Bell, A., Fairbrother, M., & Jones, K. (2019). Fixed and random effects models: Making an informed choice. *Quality & Quantity* 53(2): 1051–1074."
     optional:
@@ -224,7 +228,11 @@ sessions:
     date: "November 27"
     title: "Machine learning: Prediction and measurement"
     by: "Kevin Munger"
-    released: false
+    released: true
+    slides:
+      - label: "Machine learning: prediction and measurement"
+        src: "2026-eui-intermediate-quant/lectures/lecture-8/ml-lecture.pdf"
+        as: "08-machine-learning.pdf"
     compulsory:
       - "Mullainathan, S., & Spiess, J. (2017). Machine learning: An applied econometric approach. *Journal of Economic Perspectives* 31(2): 87–106."
       - "Grimmer, J., Roberts, M., & Stewart, B. (2021). Machine learning for social science: An agnostic approach. *Annual Review of Political Science* 24: 395–419."
